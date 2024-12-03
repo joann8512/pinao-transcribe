@@ -21,7 +21,11 @@ pip install -r requirements.txt
     ```
 
 4. To start transcribing with pre-trained model:  
-
-```
-python transcribe.py
-```
+    - Set the `audio_path` to the directory of audio files, the transcribed result will then all be saved to a new directory `midi`
+    ```
+    python transcribe.py --audio_path <audio_folder> --output_midi_path ./midi
+    ```
+    - If running into the error of `audioread.exceptions.NoBackendError`, install ffmpeg with conda:
+    ```
+    conda install ffmpeg
+    ```

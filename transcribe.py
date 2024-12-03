@@ -82,8 +82,8 @@ def main():
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='')
-    parser.add_argument('--audio_path', default='../test',type=str)
-    parser.add_argument('--output_midi_path', default='../transcribed', type=str)
+    parser.add_argument('--audio_path', require=True, type=str)
+    parser.add_argument('--output_midi_path', require=True, type=str)
     parser.add_argument('--cuda', default='cuda:0', type=str)
 
     args = parser.parse_args()
